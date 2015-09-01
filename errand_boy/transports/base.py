@@ -380,6 +380,10 @@ class BaseTransport(object):
                 
                 if remaining_len:
                     data += recv_func(connection, remaining_len)
+
+                final_len = len(data)
+                if final_len != content_length:
+                    print 'length mismatch', content_length, final_len
                 break
         
         if data:
