@@ -28,9 +28,10 @@ commands without the memory overhead incurred by os.fork().",
     download_url='https://github.com/greyside/errand-boy',
     license='BSD',
     packages=find_packages(),
-    install_requires=['eventlet', 'six'],
+    install_requires=['six'],
     tests_require=[
-        'mock==1.0.1'
+        'mock==1.0.1',
+        'eventlet'
     ],
     include_package_data=True,
     test_suite = test_package_name,
