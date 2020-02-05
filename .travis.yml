@@ -10,8 +10,11 @@ python:
   - "3.8"
 
 matrix:
+  include:
+    - python: "3.8"
+      env: MODE=flake8
   allow_failures:
-    - MODE=flake8
+    - env: MODE=flake8
 
 cache:
   directories:
